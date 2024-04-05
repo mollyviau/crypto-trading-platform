@@ -9,57 +9,57 @@ int main()
 	while (true) 
 	{
 		// 1 print help
-		cout << "1: Print Help" << std::endl;
+		cout << "1: Print Help" << endl;
 		// 2 print exchange stats
-		cout << "2: Print Exchange Stats" << std::endl;
+		cout << "2: Print Exchange Stats" << endl;
 		// 3 make an offer
-		cout << "3: Make an offer" << std::endl;
+		cout << "3: Make an offer" << endl;
 		// 4 make a bid
-		cout << "4: Make a bid" << std::endl;
+		cout << "4: Make a bid" << endl;
 		// 5 print wallet
-		cout << "5: Print Wallet" << std::endl;
+		cout << "5: Print Wallet" << endl;
 		// 6 continue
-		cout << "6: Continue" << std::endl;
+		cout << "6: Continue" << endl;
 		// 7 exit
-		cout << "7: Exit" << std::endl;
+		cout << "7: Exit" << endl;
 
 
-		std::cout << "=============" << std::endl;
-		std::cout << "Type in 1-7" << std::endl;
+		cout << "=============" << endl;
+		cout << "Type in 1-7" << endl;
 
 		int userOption;
-		std::cin >> userOption;
-		std::cout << "You chose: " << userOption << std::endl;
+		cin >> userOption;
+		cout << "You chose: " << userOption << endl;
 
 		switch (userOption) {
 		case 0: 
-			std::cout << "Invalid choice, choose 1-7." << std::endl;
+			cout << "Invalid choice, choose 1-7." << endl;
 			break;
 		case 1:
-			std::cout << "Help: Your aim is to make money, analyse the market and make bids and offers." << std::endl;
+			cout << "Help: Your aim is to make money, analyse the market and make bids and offers." << endl;
 			break;
 		case 2:
-			std::cout << "Print Exchange Stats. Market looks good." << std::endl;
+			cout << "Print Exchange Stats. Market looks good." << endl;
 			break;
 		case 3:
-			std::cout << "Make an offer." << std::endl;
+			cout << "Make an offer." << endl;
 			break;
 		case 4:
-			std::cout << "Make a bid." << std::endl;
+			cout << "Make a bid." << endl;
 			break;
 		case 5:
-			std::cout << "Print Wallet. Here's your wallet: $xx,xxx" << std::endl;
+			cout << "Print Wallet. Here's your wallet: $xx,xxx" << endl;
 			break;
 		case 6:
-			std::cout << "Going to next time frame." << std::endl;
+			cout << "Going to next time frame." << endl;
 			break;
 		case 7:
-			std::cout << "Exiting, Goodbye Trader!" << std::endl;
+			cout << "Exiting, Goodbye Trader!" << endl;
 			// Exit the program
 			exit(0);
 			break;
 		default:
-			std::cout << "Invalid choice\n";
+			cout << "Invalid choice" << endl;
 			
 		}
 	}
