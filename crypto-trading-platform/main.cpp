@@ -23,6 +23,43 @@ void printMenu()
 	cout << "=============" << endl;
 }
 
+void printHelp() 
+{
+	cout << "Help: Your aim is to make money, analyse the market and make bids and offers." << endl;
+}
+
+void printMarketStats() 
+{
+	cout << "Print Exchange Stats. Market looks good." << endl;
+}
+
+void enterOffer()
+{
+	cout << "Make an offer." << endl;
+}
+
+void enterBid()
+{
+	cout << "Make a bid." << endl;
+}
+
+void printWallet()
+{
+	cout << "Print Wallet. Here's your wallet: $xx,xxx" << endl;
+}
+
+void goToNextTimeframe()
+{
+	cout << "Going to next time frame." << endl;
+}
+
+void exitProgram()
+{
+	cout << "Exiting, Goodbye Trader!" << endl;
+	// Exit the program
+	exit(0);
+}
+
 int getUserOption() 
 {
 	int userOption;
@@ -36,31 +73,26 @@ int getUserOption()
 void processUserOption(int userOption) 
 {
 	switch (userOption) {
-	case 0:
-		cout << "Invalid choice, choose 1-7." << endl;
-		break;
 	case 1:
-		cout << "Help: Your aim is to make money, analyse the market and make bids and offers." << endl;
+		printHelp();
 		break;
 	case 2:
-		cout << "Print Exchange Stats. Market looks good." << endl;
+		printMarketStats();
 		break;
 	case 3:
-		cout << "Make an offer." << endl;
+		enterOffer();
 		break;
 	case 4:
-		cout << "Make a bid." << endl;
+		enterBid();
 		break;
 	case 5:
-		cout << "Print Wallet. Here's your wallet: $xx,xxx" << endl;
+		printWallet();
 		break;
 	case 6:
-		cout << "Going to next time frame." << endl;
+		goToNextTimeframe();
 		break;
 	case 7:
-		cout << "Exiting, Goodbye Trader!" << endl;
-		// Exit the program
-		exit(0);
+		exitProgram();
 		break;
 	default:
 		cout << "Invalid choice" << endl;
