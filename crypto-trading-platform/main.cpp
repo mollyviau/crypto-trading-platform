@@ -21,51 +21,60 @@ void printMenu()
 	cout << "7: Exit" << endl;
 
 	cout << "=============" << endl;
-	cout << "Type in 1-7" << endl;
 }
+
+int getUserOption() 
+{
+	int userOption;
+	
+	cout << "Type in 1-7" << endl;
+	cin >> userOption;
+	cout << "You chose: " << userOption << endl;
+	return userOption;
+}
+
+void processUserOption(int userOption) 
+{
+	switch (userOption) {
+	case 0:
+		cout << "Invalid choice, choose 1-7." << endl;
+		break;
+	case 1:
+		cout << "Help: Your aim is to make money, analyse the market and make bids and offers." << endl;
+		break;
+	case 2:
+		cout << "Print Exchange Stats. Market looks good." << endl;
+		break;
+	case 3:
+		cout << "Make an offer." << endl;
+		break;
+	case 4:
+		cout << "Make a bid." << endl;
+		break;
+	case 5:
+		cout << "Print Wallet. Here's your wallet: $xx,xxx" << endl;
+		break;
+	case 6:
+		cout << "Going to next time frame." << endl;
+		break;
+	case 7:
+		cout << "Exiting, Goodbye Trader!" << endl;
+		// Exit the program
+		exit(0);
+		break;
+	default:
+		cout << "Invalid choice" << endl;
+	}
+}
+
 
 int main()
 {
-	while (true) 
+	while (true)
 	{
 		printMenu();
-		int userOption;
-		cin >> userOption;
-		cout << "You chose: " << userOption << endl;
-
-		switch (userOption) {
-		case 0: 
-			cout << "Invalid choice, choose 1-7." << endl;
-			break;
-		case 1:
-			cout << "Help: Your aim is to make money, analyse the market and make bids and offers." << endl;
-			break;
-		case 2:
-			cout << "Print Exchange Stats. Market looks good." << endl;
-			break;
-		case 3:
-			cout << "Make an offer." << endl;
-			break;
-		case 4:
-			cout << "Make a bid." << endl;
-			break;
-		case 5:
-			cout << "Print Wallet. Here's your wallet: $xx,xxx" << endl;
-			break;
-		case 6:
-			cout << "Going to next time frame." << endl;
-			break;
-		case 7:
-			cout << "Exiting, Goodbye Trader!" << endl;
-			// Exit the program
-			exit(0);
-			break;
-		default:
-			cout << "Invalid choice" << endl;
-			
-
-		}
+		int userOption = getUserOption();
+		processUserOption(userOption);
 	}
-
 	return 0;
 }
