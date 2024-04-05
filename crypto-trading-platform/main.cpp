@@ -3,30 +3,32 @@
 
 using namespace std;
 
+void printMenu()
+{
+	// 1 print help
+	cout << "1: Print Help" << endl;
+	// 2 print exchange stats
+	cout << "2: Print Exchange Stats" << endl;
+	// 3 make an offer
+	cout << "3: Make an offer" << endl;
+	// 4 make a bid
+	cout << "4: Make a bid" << endl;
+	// 5 print wallet
+	cout << "5: Print Wallet" << endl;
+	// 6 continue
+	cout << "6: Continue" << endl;
+	// 7 exit
+	cout << "7: Exit" << endl;
+
+	cout << "=============" << endl;
+	cout << "Type in 1-7" << endl;
+}
 
 int main()
 {
 	while (true) 
 	{
-		// 1 print help
-		cout << "1: Print Help" << endl;
-		// 2 print exchange stats
-		cout << "2: Print Exchange Stats" << endl;
-		// 3 make an offer
-		cout << "3: Make an offer" << endl;
-		// 4 make a bid
-		cout << "4: Make a bid" << endl;
-		// 5 print wallet
-		cout << "5: Print Wallet" << endl;
-		// 6 continue
-		cout << "6: Continue" << endl;
-		// 7 exit
-		cout << "7: Exit" << endl;
-
-
-		cout << "=============" << endl;
-		cout << "Type in 1-7" << endl;
-
+		printMenu();
 		int userOption;
 		cin >> userOption;
 		cout << "You chose: " << userOption << endl;
