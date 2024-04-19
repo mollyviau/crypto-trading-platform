@@ -11,5 +11,5 @@ using namespace std;
 int main()
 {
 	MerkelMain app{};
-	app.printMenu();
+	app.init();
 }

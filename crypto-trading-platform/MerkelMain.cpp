@@ -6,11 +6,18 @@ using namespace std;
 
 MerkelMain::MerkelMain()
 {
+
 }
 
 void MerkelMain::init()
 {
-
+	int input;
+	while (true)
+	{
+		printMenu();
+		input = getUserOption();
+		processUserOption(input);
+	}
 }
 
 void MerkelMain::printMenu()
@@ -76,7 +83,14 @@ int MerkelMain::getUserOption()
 	int userOption;
 
 	cout << "Type in 1-7" << endl;
-	cin >> userOption;
+
+	// Loop until valid input is provided
+	while (!(cin >> userOption) || userOption < 1 || userOption > 7)
+	{
+		cout << "Invalid input. Please type in a number between 1 and 7: ";
+		cin.clear(); // Clear the error flag
+		cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear the input buffer
+	}
 	cout << "You chose: " << userOption << endl;
 	return userOption;
 }
